@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-md-6 form-container sign-in-container" id="sign-in-form">
+                <form action="#" class="text-left" id="login-form">
+                    <img src="img/DANACO.png" alt="" class="my-3">
+                    
+                    <div class="form-group mb-2">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="johnmartin07@gmail.com" required />
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                
+                    <div class="form-group mb-1 position-relative">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="********" required minlength="8" />
+                        <div class="invalid-feedback">Password must be at least 8 characters long.</div>
+                        <i class="fas fa-eye-slash toggle-icon" id="togglePassword"></i>
+                    </div>
+                    
+                    <!-- Remember Me Checkbox -->
+                    <div class="form-group mb-2">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="rememberMe">
+                            <label class="custom-control-label" for="rememberMe" style="margin-left: -105px;">Remember me</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn blue-btn mt-4" id="login-btn">Login</button>
+                    <div class="text-center w-100 my-4">
+                        <a href="#forgot-password-form" id="forgot-password-link">
+                            <i class="fas fa-lock" style="color: #555353;"></i> Forgot your password?
+                        </a>
+                    </div>
+                </form>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+
+            <div class="col-md-6 form-container sign-in-container" id="forgot-password-form" style="display: none;">
+                <form action="#">
+                    <img src="img/mail.png" alt="" class="mb-4">
+                    
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control mb-2" placeholder="johnmartin07@gmail.com" />
+                    </div>
+                    
+                    <button type="button" class="btn blue-btn mt-5" id="submit-email-btn">Submit</button>
+                    <a href="#enter-code-form" id="back-to-login-link" class="d-block mt-3">Back to Login</a>
+                </form>
+                
+            </div>
+
+            <!-- Enter Code Form -->
+            <div class="col-md-6 form-container sign-in-container" id="enter-code-form" style="display: none;">
+                <form action="#">
+                    <img src="img/DANACO.png" alt="" class="mb-4">
+                
+                    <div class="form-group mb-3">
+                        <label for="code" class="form-label">Enter Code</label>
+                        <div class="d-flex justify-content-between">
+                            <input type="text" id="code1" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                            <input type="text" id="code2" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                            <input type="text" id="code3" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                            <input type="text" id="code4" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                            <input type="text" id="code5" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                            <input type="text" id="code6" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                        </div>
+                    </div>
+                
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p id="timer" class="my-3 mr-1">01:00</p>
+                        <button type="button" class="btn btn-link p-0" id="resend-code-btn">Resend Code</button>
+                    </div>
+                    
+                    <button type="button" class="btn blue-btn mt-3" id="submit-code-btn">Continue</button>
+                </form>
+                
+            </div>
+
+            <!-- New Password Form -->
+            <div class="col-md-6 form-container sign-in-container" id="new-password-form" style="display: none;">
+                <form action="#">
+                    <img src="img/DANACO.png" alt="" class="mb-4">
+                    
+                    <div class="form-group mb-2 position-relative">
+                        <label for="new-password" class="form-label">New Password</label>
+                        <input type="password" id="new-password" class="form-control mb-2" placeholder="********" />
+                        <i class="fas fa-eye-slash toggle-icon" id="toggleNewPassword"></i>
+                    </div>
+            
+                    <!-- Confirm Password Field -->
+                    <div class="form-group mb-2 position-relative">
+                        <label for="confirm-password" class="form-label">Confirm Password</label>
+                        <input type="password" id="confirm-password" class="form-control mb-2" placeholder="********" />
+                        <i class="fas fa-eye-slash toggle-icon" id="toggleConfirmPassword"></i>
+                    </div>
+                    <button type="button" class="btn blue-btn mt-3" id="save-password-btn">Save</button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <h5>Streamline Your Orders from Invoice to Delivery</h5>
+                    <!-- <img src="./img/Modern VR technolgy with headset.png" alt="" class="img"> -->
+                    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                        type="module"></script>
+
+                    <dotlottie-player src="https://lottie.host/b70ca053-4ee0-4a9b-b1e4-0304d9a4d505/NfURI6uXKf.json"
+                        background="transparent" speed="1" style="width: 350px; height: 350px;" loop
+                        autoplay></dotlottie-player>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://lottie.host/5da40bf1-867e-417e-ad44-1b63d4b82932/zn2Y8qg1M0.json"></script>
+    <script src="script.js"></script>
+    <script src="pass.js"></script>
+ 
+
+
+</body>
+
+</html>
