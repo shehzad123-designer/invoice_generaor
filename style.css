@@ -283,38 +283,13 @@ input:invalid ~ .invalid-feedback {
     cursor: not-allowed;
 }
 
-/* Dashboard Navigation Bar */
-.navbar {
+.bg-blue{
     background-color: #4361BF;
-    padding: 10px;
-    align-items: center;
-}
-
-.navbar-brand {
     color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
 }
-.navbar-nav{
-    margin-left: 120px;
+.navbar-nav .nav-link{
+    font-size: 18px;
 }
-.navbar-nav .nav-link {
-    color: #dddddd;
-    font-size: 1.1rem;
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.navbar-nav .nav-link i {
-    margin-right: 8px;
-}
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link:hover {
-    color: #ffffff;
-}
-
 #logout-btn {
     color: #4361BF;
     font-weight: bold;
