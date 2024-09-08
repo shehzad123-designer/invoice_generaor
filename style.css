@@ -170,7 +170,7 @@ form {
     border: none;
     color: #fff;
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
     border-radius: 4px;
     font-size: 16px;
@@ -212,7 +212,7 @@ form {
     display: block; 
     margin-bottom: 0.5rem; 
     text-align: left; 
-    font-size: 14px;
+    font-size: 12px;
     color: #313131;
 }
 
@@ -236,7 +236,7 @@ input {
 .invalid-feedback {
     display: none; /* Hidden by default */
     color: red;
-    font-size: 0.875em;
+    font-size: 10px;
 }
 
 input:invalid ~ .invalid-feedback {
@@ -271,7 +271,7 @@ input:invalid ~ .invalid-feedback {
 
 #resend-code-btn {
     font-size: 1rem;
-    color: #007bff;
+    color: #4361BF;
     background: none;
     border: none;
     padding: 0;
@@ -287,13 +287,24 @@ input:invalid ~ .invalid-feedback {
     background-color: #4361BF;
     color: #fff;
 }
+.navbar {
+    height: 100px;
+    align-items: center; /* Vertically center elements */
+  }
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .navbar-nav .nav-link{
     font-size: 18px;
 }
-#logout-btn {
-    color: #4361BF;
-    font-weight: bold;
-    border: none;
+.navbar-nav{
+    height: 80px;
+}
+.navbar-nav ul{
+    margin-top: 10px;
 }
 #dashboard {
     width: 100%;
@@ -308,6 +319,7 @@ input:invalid ~ .invalid-feedback {
     background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
+
 }
 
 
