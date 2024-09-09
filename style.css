@@ -38,7 +38,7 @@ span {
 
 a {
     color: #333;
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: none;
     margin: 15px 0;
 }
@@ -177,9 +177,9 @@ form {
     transition: background-color 0.3s ease;
 }
 
-.btn.blue-btn:hover {
+/* .btn.blue-btn:hover {
     background-color: #3552A3;
-}
+} */
 
 .btn-link {
     font-size: 1rem;
@@ -284,13 +284,15 @@ input:invalid ~ .invalid-feedback {
 }
 
 .bg-blue{
-    background-color: #4361BF;
-    color: #fff;
+    background-color: #ffffff;
+    color: #4361BF;
 }
 .navbar {
     height: 100px;
     align-items: center; /* Vertically center elements */
-  }
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bottom shadow */
+}
+
   .navbar-collapse {
     display: flex;
     justify-content: center;
@@ -298,14 +300,36 @@ input:invalid ~ .invalid-feedback {
   }
 
 .navbar-nav .nav-link{
-    font-size: 18px;
+    font-size: 16px;
 }
 .navbar-nav{
     height: 80px;
 }
+
 .navbar-nav ul{
     margin-top: 10px;
 }
+.nav-item .nav-link {
+    color: #4361BF;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item .nav-link i {
+    color: #4361BF;
+}
+
+.nav-item.active .nav-link {
+    background-color: #4361BF;
+    color: white;
+    border-radius: 4px;
+}
+
+.nav-item.active .nav-link i {
+    color: white;
+}
+
+
 #dashboard {
     width: 100%;
     height: 100%;
