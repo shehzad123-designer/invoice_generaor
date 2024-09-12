@@ -288,9 +288,10 @@ input:invalid ~ .invalid-feedback {
     color: #4361BF;
 }
 .navbar {
-    height: 100px;
+    height: 80px;
     align-items: center; /* Vertically center elements */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bottom shadow */
+    position: relative;
 }
 
   .navbar-collapse {
@@ -313,6 +314,7 @@ input:invalid ~ .invalid-feedback {
     color: #4361BF;
     display: flex;
     align-items: center;
+    margin-top: 16px;
 }
 
 .nav-item .nav-link i {
@@ -323,13 +325,24 @@ input:invalid ~ .invalid-feedback {
     background-color: #4361BF;
     color: white;
     border-radius: 4px;
+    margin-top: 18px;
 }
 
 .nav-item.active .nav-link i {
     color: white;
 }
 
-
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    margin-top: -20px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 8px;
+    padding: 10px;
+  
+}
 
 #dashboard {
     width: 100%;

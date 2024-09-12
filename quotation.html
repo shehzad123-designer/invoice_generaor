@@ -24,7 +24,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse pt-3" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse pt-4" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-0">
                     <li class="nav-item active mx-4">
                         <a class="nav-link active" href="quotation.html">
@@ -51,37 +51,34 @@
                 <!-- Profile Dropdown -->
                 <div class="dropdown ml-auto">
                     <a class="nav-link d-flex align-items-center" href="#" id="profileDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXJr-fGkiy1DE5A0JNOkcmCNGcXuQXdzENZA&s"
-                        alt="" class="rounded-circle" width="60" height="60">
-                    <div class="ml-0"> <!-- Added margin for spacing -->
-                        <span class="d-block font-weight-bold fs-2">Erfan Khot</span> <!-- Bold name -->
-                        <span class="d-block text-muted">Technical Officer</span> <!-- Light email address -->
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXJr-fGkiy1DE5A0JNOkcmCNGcXuQXdzENZA&s"
+                             alt="" class="rounded-circle" width="50" height="50">
+                        <div class="ml-1"> <!-- Adjusted margin for better spacing -->
+                            <span class="d-block font-weight-bold fs-2">Erfan Khot</span>
+                            <span class="d-block text-muted">Technical Officer</span>
+                        </div>
+                    </a>
+            
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="#"><i class="fas fa-envelope mr-2"></i> Danaco@gmail.com</a>
+                        <a class="dropdown-item" href="reset.html"><i class="fas fa-key mr-2"></i> Reset Password</a>
+            
+                        <div class="dropdown-divider"></div>
+            
+                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a>
                     </div>
-                </a>
-                
-                
-                
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
-                    <!-- Email and reset password links -->
-                    <a class="dropdown-item" href="#"><i class="fas fa-envelope mr-2"></i> Danaco@gmail.com</a>
-                    <a class="dropdown-item" href="reset.html"><i class="fas fa-key mr-2"></i> Reset Password</a>
-                
-                    <div class="dropdown-divider"></div>
-                
-                    <!-- Logout -->
-                    <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a>
-                </div>
-                
-
-
                 </div>
 
             </div>
         </nav>
 
-        <div class="container-fluid mt-4" id="dashboard-content">
+        <div class="container-fluid my-3" id="dashboard-content">
+            <!-- <div class="ml-1">
+                <h5>Quotation</h5>
+            </div> -->
             <div class="row">
+                
                 <div class="col-md-6" style="background-color: #fff;">
                     <div class="d-flex justify-content-between align-items-center my-4">
                         <img src="img/DANACO.png" alt="Company Logo" class="logo">
@@ -117,7 +114,7 @@
                         </div>
                         <div class="row">
                             <div class="col text-right">
-                                <button type="button" class="btn btn-primary my-2" id="add-row-btn">Add Row</button>
+                                <button type="button" class="btn btn-primary my-2" id="add-row-btn">Add Product</button>
                             </div>
                         </div>
                     </div>
@@ -125,24 +122,22 @@
                 
                 <div class="col-md-6">
                     <div class="row d-flex justify-content-between align-items-center">
-                        <div class="col-auto">
-                            <h3>Quotation</h3>
-                        </div>
-                        <div class="col-auto">
+                   
+                        <!-- <div class="col-auto">
                             <a href="mailto:?subject=Quotation&body=Please find the attached quotation." class="btn btn-primary" id="share-quotation">
-                                <i class="fas fa-share-alt"></i> <!-- Share Icon -->
+                                <i class="fas fa-share-alt"></i>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                     
                     
                 
-                    <div id="invoice-preview" class="border p-4" style="width: 100%; height: 29.7cm; position: relative;">
-                        <div class="d-flex justify-content-between align-items-center my-4">
+                    <div id="invoice-preview" class="border p-3" style="width: 100%; height: 29.7cm; position: relative;">
+                        <div class="d-flex justify-content-between align-items-center">
                             <img src="img/DANACO.png" alt="Company Logo" class="logo">
                             <img src="img/qr.png" alt="QR Code" class="qr-code mr-3" style="height: 150px;width: 150px;">
                         </div>
-                        <p>Cecilia Chapman<br>711-2880 Nulla St.<br>Mankato Mississippi 96522<br>(257) 563-7401</p>
+                        <p class="my-2">Cecilia Chapman<br>711-2880 Nulla St.<br>Mankato Mississippi 96522<br>(257) 563-7401</p>
                         <p><strong>Date:</strong> <span id="display-invoice-date"></span></p>
                         <table class="table table-bordered">
                             <thead>
