@@ -222,7 +222,7 @@ input {
     background-color: #eee;
     border: 1px solid #ced4da;
     border-radius: 4px;
-    font-size: 10px;
+    /* font-size: 10px; */
 }
 
 .invalid-feedback {
