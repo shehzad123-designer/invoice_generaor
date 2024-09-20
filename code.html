@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Code</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-md-6 form-container sign-in-container" id="enter-code-form">
+                <form action="#">
+                    <img src="img/DANACO.png" alt="" class="mb-4">
+                
+                    <div class="form-group mb-3">
+                        <label for="code" class="form-label">Enter Code</label>
+                        <div class="d-flex justify-content-between">
+                            <input type="text" id="code1" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                            <input type="text" id="code2" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                            <input type="text" id="code3" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                            <input type="text" id="code4" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                            <input type="text" id="code5" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                            <input type="text" id="code6" class="form-control code-input" maxlength="1" pattern="\d*" inputmode="numeric" />
+                        </div>
+                    </div>
+                
+                    <div class="d-flex justify-content-center align-items-center">
+                        <p id="timer" class="my-3 mr-1">01:00</p>
+                        <button type="button" class="btn btn-link p-0" id="resend-code-btn">Resend Code</button>
+                    </div>
+                    
+                    <button type="button" class="btn blue-btn mt-3" id="submit-code-btn">Continue</button>
+                </form>
+            </div>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <h5>Streamline Your Orders from Invoice to Delivery</h5>
+                    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                    <dotlottie-player src="https://lottie.host/b70ca053-4ee0-4a9b-b1e4-0304d9a4d505/NfURI6uXKf.json" background="transparent" speed="1" style="width: 350px; height: 350px;" loop autoplay></dotlottie-player>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://lottie.host/5da40bf1-867e-417e-ad44-1b63d4b82932/zn2Y8qg1M0.json"></script>
+    <script src="script.js"></script>
+    <script src="time.js"></script>
+    <script src="pass.js"></script>
+    <script>
+        document.getElementById("submit-code-btn").addEventListener("click", function() {
+            window.location.href = "newpass.html"; // Redirect to newpass.html
+        });
+    </script>
+    
+</body>
+
+</html>

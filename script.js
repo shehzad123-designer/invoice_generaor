@@ -4,29 +4,12 @@ document.getElementById('login-btn').addEventListener('click', function() {
 });
 
 
-document.getElementById('forgot-password-link').addEventListener('click', function(event) {
-    event.preventDefault(); 
-    document.getElementById('sign-in-form').style.display = 'none';
-    document.getElementById('forgot-password-form').style.display = 'block';
+
+document.getElementById("submit-email-btn").addEventListener("click", function() {
+    window.location.href = "code.html"; // Redirect to code.html
 });
-
-
-document.getElementById('back-to-login-link').addEventListener('click', function(event) {
-    event.preventDefault();
-    document.getElementById('forgot-password-form').style.display = 'none';
-    document.getElementById('sign-in-form').style.display = 'block';
-});
-
-
-document.getElementById('submit-email-btn').addEventListener('click', function() {
-    document.getElementById('forgot-password-form').style.display = 'none';
-    document.getElementById('enter-code-form').style.display = 'block';
-});
-
-
-document.getElementById('submit-code-btn').addEventListener('click', function() {
-    document.getElementById('enter-code-form').style.display = 'none';
-    document.getElementById('new-password-form').style.display = 'block';
+document.getElementById("submit-code-btn").addEventListener("click", function() {
+    window.location.href = "newpass.html"; // Redirect to code.html
 });
 
 
