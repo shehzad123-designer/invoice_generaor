@@ -24,14 +24,14 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-        <div class="collapse navbar-collapse pt-4" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse pt-4" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-0">
-                    <li class="nav-item active mx-4">
-                        <a class="nav-link active" href="quotation.html">
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="quotation.html">
                             <i class="fas fa-file-invoice" style="margin-right: 8px;"></i> Quotation
                         </a>
                     </li>
-                    <li class="nav-item mx-4">
+                    <li class="nav-item active mx-4">
                         <a class="nav-link" href="invoice.html">
                             <i class="fas fa-ticket-alt" style="margin-right: 8px;"></i> Invoice & Delivery
                         </a>
@@ -51,21 +51,21 @@
                 <!-- Profile Dropdown -->
                 <div class="dropdown ml-auto">
                     <a class="nav-link d-flex align-items-center" href="#" id="profileDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXJr-fGkiy1DE5A0JNOkcmCNGcXuQXdzENZA&s"
-                             alt="" class="rounded-circle" width="50" height="50">
+                            alt="" class="rounded-circle" width="50" height="50">
                         <div class="ml-1"> <!-- Adjusted margin for better spacing -->
                             <span class="d-block font-weight-bold fs-2">Erfan Khot</span>
                             <span class="d-block text-muted">Technical Officer</span>
                         </div>
                     </a>
-            
+
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
                         <a class="dropdown-item" href="#"><i class="fas fa-envelope mr-2"></i> Danaco@gmail.com</a>
                         <a class="dropdown-item" href="reset.html"><i class="fas fa-key mr-2"></i> Reset Password</a>
-            
+
                         <div class="dropdown-divider"></div>
-            
+
                         <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a>
                     </div>
                 </div>
@@ -73,33 +73,69 @@
             </div>
         </nav>
 
-        <div class="container-fluid my-3" id="dashboard-content">
-            <!-- <div class="ml-1">
-                <h5>Quotation</h5>
-            </div> -->
+        <div class="container-fluid mt-4" id="dashboard-content">
             <div class="row">
-                
-                <div class="col-md-6" style="background-color: #fff;">
-                    <div class="d-flex justify-content-between align-items-center my-4">
-                        <img src="img/DANACO.png" alt="Company Logo" class="logo">
-                        <img src="img/qr.png" alt="QR Code" class="qr-code mr-3" style="height: 150px;width: 150px;">
+                <div class="col-md-6" style="background-color: #fff; height: 22.7 cm;">
+                    <div class="row align-items-center my-4">
+                        <!-- Column for the company logo -->
+                        <div class="col-md-6">
+                            <img src="img/DANACO.png" alt="Company Logo" class="logo img-fluid"
+                                style="width: 80px; height: 80px;;">
+                        </div>
+
+                        <!-- Column for the invoice number -->
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column">
+                                <label for="invoiceNo" class="form-label mb-1">Invoice No:</label>
+                                <input type="number" id="invoiceNo" class="form-control form-control-sm w-auto"
+                                    placeholder="1234" minlength="4" maxlength="4">
+                            </div>
+                        </div>
                     </div>
-                    
-                    <p>Cecilia Chapman<br>711-2880 Nulla St.<br>Mankato Mississippi<br>96522<br>(257) 563-7401</p>
+
+
+
+                    <div class="row mb-4">
+                        <!-- Column for the static text -->
+                        <div class="col-md-6">
+                            <p>
+                                Cecilia Chapman<br>
+                                711-2880 Nulla St.<br>
+                                Mankato Mississippi<br>
+                                96522<br>
+                                (257) 563-7401
+                            </p>
+                        </div>
+
+                        <!-- Column for the recipient address as input fields -->
+                        <div class="col-md-6">
+                            <div class="mb-2">
+                                <input type="text" class="form-control form-control-sm" placeholder="Recipient Name">
+                            </div>
+                            <div class="mb-2">
+                                <input type="text" class="form-control form-control-sm" placeholder="Street Address">
+                            </div>
+                            <div class="mb-2">
+                                <input type="text" class="form-control form-control-sm" placeholder="Phone Number">
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="form-group mb-2">
                         <label for="invoice-date" class="sr-only">Date</label>
                         <input type="date" class="form-control w-50" id="invoice-date" placeholder="Date">
                     </div>
-                    <div class="container-2 my-4" style="padding: 0px 40px 0px 40px; background-color: #F3F3F3;">
+                    <div class="container-2 mt-4" style="padding: 0px 40px 0px 40px; background-color: #F3F3F3;">
                         <div id="input-container" class="mt-3">
                             <div class="row mb-2 default-row">
                                 <div class="col-lg-5 mb-2">
                                     <h6>Item</h6>
-                                    <input type="text" class="form-control-2" placeholder="Item Description"  required>
+                                    <input type="text" class="form-control-2" placeholder="Item Description" required>
                                 </div>
                                 <div class="col-lg-3 mb-2">
                                     <h6>Quantity</h6>
-                                    <input type="number" class="form-control-2" placeholder="Quantity"  required>
+                                    <input type="number" class="form-control-2" placeholder="Quantity" required>
                                 </div>
                                 <div class="col-lg-3 mb-2">
                                     <h6>Amount</h6>
@@ -114,30 +150,50 @@
                         </div>
                         <div class="row">
                             <div class="col text-right">
-                                <button type="button" class="btn btn-primary my-2" id="add-row-btn">Add Product</button>
+                                <button type="button" class="btn btn-primary mt-2" id="add-row-btn">Add Row</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6">
-                    <div class="row d-flex justify-content-between align-items-center">
-                   
-                        <!-- <div class="col-auto">
-                            <a href="mailto:?subject=Quotation&body=Please find the attached quotation." class="btn btn-primary" id="share-quotation">
-                                <i class="fas fa-share-alt"></i>
-                            </a>
-                        </div> -->
-                    </div>
                     
-                    
-                
-                    <div id="invoice-preview" class="border p-3" style="width: 100%; height: 29.7cm; position: relative;">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <img src="img/DANACO.png" alt="Company Logo" class="logo">
-                            <img src="img/qr.png" alt="QR Code" class="qr-code mr-3" style="height: 150px;width: 150px;">
+                    <div id="invoice-preview" class="border p-4"
+                        style="width: 100%; height: 29.7cm; position: relative;">
+
+                        <div class="row align-items-center my-4">
+                            <!-- Column for the company logo -->
+                            <div class="col-md-6">
+                                <img src="img/DANACO.png" alt="Company Logo" class="mb-4">
+                            </div>
+
+                            <!-- Column for the invoice number -->
+                            <div class="col-md-6">
+                                <div class="d-flex flex-column">
+                                    <p><strong>Invoice No:</strong> <span id="display-invoice-no"></span></p>
+                                </div>
+                            </div>
                         </div>
-                        <p class="my-2">Cecilia Chapman<br>711-2880 Nulla St.<br>Mankato Mississippi 96522<br>(257) 563-7401</p>
+
+
+
+
+                        <div class="row mb-4">
+                            <!-- Column for company details -->
+                            <div class="col-md-6">
+                                <p id="preview-company-details">
+                                    Cecilia Chapman<br>711-2880 Nulla St.<br>Mankato Mississippi 96522<br>(257) 563-7401
+                                </p>
+                            </div>
+                            <!-- Column for recipient details -->
+                            <div class="col-md-6">
+                                <p><strong>Recipient:</strong><br>
+                                    <span id="display-recipient-name"></span><br>
+                                    <span id="display-recipient-address"></span><br>
+                                    <span id="display-recipient-phone"></span>
+                                </p>
+                            </div>
+                        </div>
                         <p><strong>Date:</strong> <span id="display-invoice-date"></span></p>
                         <table class="table table-bordered">
                             <thead>
@@ -152,14 +208,15 @@
                                 <!-- Dynamically generated rows will go here -->
                             </tbody>
                         </table>
-                        <p style="text-align: end;"><strong>Total Amount:</strong>
-                            KWD <span id="total-amount"></span></p>
+                        <p style="text-align: end;"><strong>Total Amount:</strong> KWD <span id="total-amount"></span>
+                        </p>
                         <div class="button-group" style="position: absolute; bottom: 20px; right: 20px;">
                             <button class="btn btn-success" id="print-invoice">Print Invoice</button>
                         </div>
                     </div>
                 </div>
-                
+
+
             </div>
         </div>
     </div>
@@ -167,7 +224,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://lottie.host/5da40bf1-867e-417e-ad44-1b63d4b82932/zn2Y8qg1M0.json"></script>
-    <script src="quotation.js"></script>
+    <script src="invoice.js"></script>
     <script src="script.js"></script>
 
 </body>
