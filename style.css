@@ -426,6 +426,20 @@ input:invalid ~ .invalid-feedback {
     height: 120px;
     width: 120px;
 }
+#product {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#product .content {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
 
 
 
