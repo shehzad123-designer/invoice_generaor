@@ -176,4 +176,4 @@ document.getElementById('productSearch').addEventListener('input', function() {
             product.style.display = 'none';
         }
     });
-});
+})
