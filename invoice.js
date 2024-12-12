@@ -94,36 +94,22 @@ function deleteRow(button) {
 }
 
 // Function to print the invoice
-document.getElementById("print-invoice").addEventListener("click", function() {
+document.getElementById("print-btn").addEventListener("click", function() {
     // Select the invoice section
     var invoiceContent = document.getElementById("invoice-preview").innerHTML;
 
     // Open a new window for printing
-    var printWindow = window.open('', '', 'height=1123,width=794'); // A4 dimensions: height=1123px, width=794px
+    var printWindow = window.open('', '', 'height=600,width=800');
     
     // Write the HTML of the invoice content into the new window
     printWindow.document.write('<html><head><title>Print Invoice</title>');
-    
-    // Optional: include Bootstrap for styling (you can replace this with your own styles)
     printWindow.document.write('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">');
-    
-    // Custom styles for print media to set A4 size and adjust content
-    printWindow.document.write(`
-        <style>
-            @media print {
-                @page { size: A4; margin: 10mm; } /* A4 page size */
-                body { margin: 0; padding: 10mm; }
-                table { width: 100%; border-collapse: collapse; }
-                table th, table td { border: 1px solid black; padding: 8px; text-align: left; }
-            }
-        </style>
-    `);
-    
+    printWindow.document.write('<style>@media print { #print-btn { display: none !important; } }</style>'); // CSS to hide print button on print
     printWindow.document.write('</head><body>');
-    printWindow.document.write(invoiceContent); // Insert invoice content
+    printWindow.document.write(invoiceContent);
     printWindow.document.write('</body></html>');
 
-    // Close the document to apply the styles
+    // Close the document to apply styles
     printWindow.document.close();
 
     // Wait for the content to load and then print
@@ -132,6 +118,7 @@ document.getElementById("print-invoice").addEventListener("click", function() {
         printWindow.close();
     };
 });
+
 
 
 // Function to handle logout

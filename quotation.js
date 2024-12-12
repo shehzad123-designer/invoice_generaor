@@ -71,43 +71,39 @@ function deleteRow(button) {
     updateInvoiceTable();
 }
 
-// Function to print the invoice
-document.getElementById("print-invoice").addEventListener("click", function() {
-    // Select the invoice section
+// Updated Function Function to print the invoice
+document.getElementById("print-btn").addEventListener("click", function() {
+
     var invoiceContent = document.getElementById("invoice-preview").innerHTML;
 
-    // Open a new window for printing
+ 
     var printWindow = window.open('', '', 'height=600,width=800');
     
     // Write the HTML of the invoice content into the new window
     printWindow.document.write('<html><head><title>Print Invoice</title>');
-    printWindow.document.write('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">'); // Optional: include Bootstrap for styling
-    printWindow.document.write('<style>@media print { body { margin: 0; } }</style>'); // Optional: additional styles for print
+    printWindow.document.write('<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">');
+    printWindow.document.write('<style>@media print { #print-btn { display: none !important; } }</style>'); // CSS to hide print button on print
     printWindow.document.write('</head><body>');
     printWindow.document.write(invoiceContent);
     printWindow.document.write('</body></html>');
 
-    // Close the document to apply styles
+
     printWindow.document.close();
 
-    // Wait for the content to load and then print
+
     printWindow.onload = function() {
         printWindow.print();
         printWindow.close();
     };
 });
-
+/*--------------------------------------Print Function btn-----------------------*/
 
 // Function to handle logout
 document.getElementById("logout-btn").addEventListener("click", function () {
     window.location.href = "index.html";
 });
 
-
-
-
-
-
+/*----------------------------------------------*/
 
 document.getElementById('productSearch').addEventListener('input', function() {
     const searchQuery = this.value.toLowerCase();
